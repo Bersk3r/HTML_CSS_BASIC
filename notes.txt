@@ -1,0 +1,23 @@
+# HTML : HyperText Markup Language, 웹의 구조 + 컨텐츠
+# 웹 사이트를 웹 문서과 웹 애플리케이션 중 웹 애플리케이션으로 보는 게 많음
+# CSS : Cascading Style Sheet, 디자인
+# Javascript : 웹의 동작 (과거) , 웹의 모든 것 (현재)
+# document.head.parentNode.removeChild(document.head); =>  CSS가 사라짐 (head에 css를 정의하므로, 완전하게 사라진 것은 아님 = 인라인으로 작성된 부분도 존재하므로)
+
+# HTML은 트리 구조로 되어 있음 (부모-자식-형제, 계층 구조)
+# 태그 구조는 하기와 같습니다.
+<parent>
+    <children>
+        <grandchildren>
+        <grandchildren>
+    </children>
+    <sibling>
+        <grandchildren>
+        <grandchildren>
+    </sibling>
+</parent>
+
+# HTML은 문법이 엄격하지 않아, body/head에 들어갈 내용이 아무데나 들어가도 동작합
+# HTML 내 여는 태그만으로 동작하는 경우, 내부에 들어갈 태그나 내용이 없을 때에 해당됨
+=> <meta charset="utf-8" />
+=> 여는 태그만 작성해도 동작하더라도 닫는 태그는 반드시 작성할 것
