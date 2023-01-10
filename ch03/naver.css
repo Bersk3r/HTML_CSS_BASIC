@@ -17,8 +17,10 @@
 
 /* 자식 선택자 지정 = 바로 안에 속한 태그 (깊이 2) */
 #header-search > h1 {
-    width: 280px;
+    width: 222px;
+    height: 52px;
     display:inline-block;
+    background-image: url('./sp_search.png');
 }
 
 #header-search h2 {

@@ -34,3 +34,7 @@
 # CSS에서 선택자와 속성들을 외어야 됨.
 # CSS 내 display 속성의 값에는 block, inline-block, inline, none이 있다.
 => block은 너비 100% 차지, inline-block에는 width/height 지정 가능, inline은 컨텐츠의 너비만큼 공간 차지 (margin X)
+# HTML 내에서 id는 고유한 값, class는 중복 사용 가능 (또한, 동시 사용도 가능)
+=> ex) <div class="blind wook jim" />
+# 이미지 한 개에 관련 있는 여러 개의 이미지를 합쳐놓은 것을 이미지 스프라이트라고 함
+=> HTTP/2 프로토콜의 등장으로 네트워크 환경이 개선되었으나, 이전에는 이미지 각각 다른 곳에서 가져오는 걸 동시에 하는 게 어려웠음
