@@ -24,3 +24,13 @@
 # 시멘틱 태그 : header, nav, main, footer, article, asside, figure와 같이 "div id~"와 동일하나, 의미를 가지는 태그
 => 시멘틱 태그는 웹 제약 사항이 존재함.
 => 이러한 웹 제약 사항을 웹 표준이라고 함.
+# CSS 구조는 "속성명: 속성값" 형태이며, 여러 개 일때에는 세미콜론으로 구분 (속성명: 속성값; 속성명2: 속성값2)
+# HTML 태그 내에 CSS를 정의하는 것을 인라인 스타일이라고 함. (비권장)
+# user agent stylesheet는 브라우저에서 정의한 CSS라고 이해하면 됨
+# CSS는 조상/부모 태그에 대한 CSS 속성을 자식 태그가 덮어쓰는 특징을 가지고 있음
+# 각 브라우저에서 호환되게 끔 잘 처리하는 것을 크로스 브라우징이라고 부름
+# CSS에서 px 단위는 상대적인 단위 (모니터 크기에 따라 달라짐)
+=> screen.width / screen.height : 화면의 너비/높이를 보여줌
+# CSS에서 선택자와 속성들을 외어야 됨.
+# CSS 내 display 속성의 값에는 block, inline-block, inline, none이 있다.
+=> block은 너비 100% 차지, inline-block에는 width/height 지정 가능, inline은 컨텐츠의 너비만큼 공간 차지 (margin X)
