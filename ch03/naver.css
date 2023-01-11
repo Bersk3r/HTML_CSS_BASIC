@@ -15,12 +15,27 @@
     width: 1080px;
 }
 
+#header-search a {
+    text-decoration: none;
+}
 /* 자식 선택자 지정 = 바로 안에 속한 태그 (깊이 2) */
-#header-search > h1 {
+#header-search h1 {
+    display: inline-block;
+    /*background-image: url('./sp_search.png');*/
+    /*background-position: 0 -158px;*/
+    /*background-repeat: no-repeat;*/
+    background: url(./sp_search.png) 0px -158px no-repeat;
+    /*vertical-align: top;*/
+    background-size: 442px 428px;
     width: 222px;
     height: 52px;
-    display:inline-block;
-    background-image: url('./sp_search.png');
+    /*text-indent: 101%;*/
+    /*overflow: hidden;*/
+
+}
+
+#header-search h1 span {
+    display: none;
 }
 
 #header-search h2 {
@@ -28,8 +43,22 @@
 }
 
 #header-search fieldset {
-    width : 520px;
+    margin-left : 20px;
+    /*padding-top : 12px;*/
+    /*padding-bottom : 12px;*/
+    /*padding-left : 10px;*/
+    /*padding-right : 0px;*/
+    padding: 12px 0 12px 10px;
+    width : 521px;
+    height: 49px;
     display:inline-block;
+    /*border-top: 2px solid #03cf5d;*/
+    /*border-right: 2px solid #03cf5d;*/
+    /*border-bottom: 2px solid #03cf5d;*/
+    /*border-left: 2px solid #03cf5d;*/
+    border:2px solid #03cf5d;
+    /*box-sizing: content-box;*/
+    box-sizing: border-box;
 }
 
 /* 자손 선택자 지정 = 깊이가 3이상에 속한 태그 */
