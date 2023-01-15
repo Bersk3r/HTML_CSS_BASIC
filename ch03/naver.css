@@ -1,6 +1,10 @@
 /* 선택자 (selector) */
 /* div만 생략 가능 */
 /* display: none 속성 사용 시, 스크린리더에도 읽히지 않음 */
+/* *은 모든 태그를 의미 */
+* {
+    box-sizing: border-box;
+}
 .blind {
     position: absolute;
     clip: rect(0 0 0 0);
@@ -29,6 +33,7 @@
     background-size: 442px 428px;
     width: 222px;
     height: 52px;
+    vertical-align: middle;
     /*text-indent: 101%;*/
     /*overflow: hidden;*/
 
@@ -56,9 +61,38 @@
     /*border-right: 2px solid #03cf5d;*/
     /*border-bottom: 2px solid #03cf5d;*/
     /*border-left: 2px solid #03cf5d;*/
+    /* border:2px solid rgb(61,133,51); */
     border:2px solid #03cf5d;
-    /*box-sizing: content-box;*/
-    box-sizing: border-box;
+    /* border : 굴기, 선 종류, 색 (RGB, HEX 표기법) */
+    /* box-sizing: content-box; */
+    /* box-sizing: border-box; */
+    vertical-align: middle;
+}
+
+#header-search fieldset input {
+    border: none;
+    padding: 0;
+    outline: none;
+}
+
+#header-search fieldset button
+{
+    width: 56px;
+    height: 56px;
+    border: none;
+    padding: 0;
+    outline: none;
+    background: #03cf5d;
+}
+
+#search-image {
+    display: inline-block;
+    width: 56px;
+    height: 56px;
+    background-image: url(./sp_search.png);
+    background-position: -834px -42px;
+    background-repeat: no-repeat;
+    margin: 0px;
 }
 
 /* 자손 선택자 지정 = 깊이가 3이상에 속한 태그 */

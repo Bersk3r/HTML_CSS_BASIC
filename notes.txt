@@ -54,3 +54,18 @@
 => `box-sizing : content-box`는 박스의 크기를 content 길이까지 포함
 => `box-sizing : border-box`는 박스의 크기를 border 길이까지 포함
 => 되도록 모든 태그에 border-box를 적용하는 것이 좋음
+# 프로그래머는 중복을 없애야 한다.
+# input 태그에 기본적으로 css (box 구조)가 적용되어 있음
+=> 브라우저마다 기본 CSS가 다르다. 그렇기에 기본 CSS를 없애는 게 좋다
+=> 기본 CSS를 없애는 걸 CSS reset이라고 함, reset.css, normalize.css라는 파일로 많이 사용함
+# 색 HEX가 익숙하지 않은 분은 구글에 "hex color"라고 검색하면 나옴
+# input 태그의 파란색 테두리를 "outline"이라고 함
+=> 브라우저 기본 동작으로 button이나 input에 주로 적용됨, 하지만 있는 게 나을 수 있는데 이유는 마우스가 focus 되어 있는지 확인하기 위한 목적
+# input 태그에서 border, padding, outline을 없애는 방법은 각각 none, 0, none으로 설정하면 된다.
+# 기본적인 css 틀을 이해한 후에는 외우는 것 밖엔 없다.
+# 같은 형제 태그끼리 높낮이가 다를 수 있다.
+=> 주로, 서로 height가 다를 때 배치/정렬이 달라짐
+=> 세로 정렬 시, vertical-align을 사용하는데, 이 때 display가 inline이나 inline-block일 때만 적용된다.
+# blind는 안 보이게 할 세부 요소에만 넣을 것
+# CSS에서 부모 자손 관계가 길어진다 싶을 때, ID로 적용하는 것이 좋다.
+# span 태그의 display 값은 기본 inline이며, 이는 가로, 세로 크기 조정이 불가능함
