@@ -36,6 +36,8 @@
     vertical-align: middle;
     /*text-indent: 101%;*/
     /*overflow: hidden;*/
+    position: relative;
+    top: -6px
 
 }
 
@@ -67,30 +69,38 @@
     /* box-sizing: content-box; */
     /* box-sizing: border-box; */
     vertical-align: middle;
+    position: relative;
 }
 
 #header-search fieldset input {
     border: none;
     padding: 0;
     outline: none;
+    vertical-align: top;
+    width: 444px;
+    height: 24px;
 }
 
 #header-search fieldset button
 {
-    width: 56px;
-    height: 56px;
+    width: 49px;
+    height: 49px;
     border: none;
     padding: 0;
     outline: none;
     background: #03cf5d;
+    position : absolute;
+    right : 0;
+    top: -2px;
 }
 
 #search-image {
+    background-size: 442px 428px;
     display: inline-block;
-    width: 56px;
-    height: 56px;
+    width: 22px;
+    height: 22px;
     background-image: url(./sp_search.png);
-    background-position: -834px -42px;
+    background-position: -420px -22px;
     background-repeat: no-repeat;
     margin: 0px;
 }

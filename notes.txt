@@ -69,3 +69,17 @@
 # blind는 안 보이게 할 세부 요소에만 넣을 것
 # CSS에서 부모 자손 관계가 길어진다 싶을 때, ID로 적용하는 것이 좋다.
 # span 태그의 display 값은 기본 inline이며, 이는 가로, 세로 크기 조정이 불가능함
+# HTML은 적어준 순서대로 화면에 표시됨 (위->아래, 왼쪽->오른쪽)
+=> 포지션을 사용하면 기본 흐름을 바꾸는 게 가능함
+# 기본적으로 vertical-align은 baseline으로 되어 있음
+# input의 display 기본 속성은 inline-block이다. (width, height 적용 가능)
+# position에서 absolute를 사용하면, 위치 변경이 가능해진다.
+=> top, bottom, left, right 형태로 위치 지정이 가능하다.
+# position에서 특정 요소를 기준으로 위치 변경하는 경우, relative를 사용하면 특정 요소를 기반으로 위치 지정이 가능하다.
+=> 이 때, position : relative는 기준으로 잡고자 하는 요소에 부여해야 함.
+# CSS에서 Block Formatting Context, Stacking Context가 중요하다.
+=> Block Formatting Context는 Block 구조의 렌더링 순서를 지정하는 규칙 (블록 간 레이아웃 위치 지정)
+=> Stacking Context는 특정 DIV의 렌더링 순서를 지정하는 규칙 (태그끼리 겹치는 순서 지정)
+=> 목적은 원하는 위치에 태그를 배치하고자 할 때 중요함
+# HTML은 모바일, 태블릿 간의 배치, 크로스 브라우징에 따라 화면 구조가 변경될 수 있다.
+=> 화면 만들 때, 여러 가지 브라우저 테스트가 필수적임.
