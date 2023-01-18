@@ -77,9 +77,16 @@
 => top, bottom, left, right 형태로 위치 지정이 가능하다.
 # position에서 특정 요소를 기준으로 위치 변경하는 경우, relative를 사용하면 특정 요소를 기반으로 위치 지정이 가능하다.
 => 이 때, position : relative는 기준으로 잡고자 하는 요소에 부여해야 함.
-# CSS에서 Block Formatting Context, Stacking Context가 중요하다.
+# CSS에서 Containing Block, Block Formatting Context, Stacking Context가 중요하다.
+=> Containing Block은 감싸고 있는 태그를 찾으면서 컨테이닝 블록 식별 규칙을 충족해야 한다.
+   (숫자로 구성된 속성에 부모-자식 태그 간의 영향을 받음)
 => Block Formatting Context는 Block 구조의 렌더링 순서를 지정하는 규칙 (블록 간 레이아웃 위치 지정)
 => Stacking Context는 특정 DIV의 렌더링 순서를 지정하는 규칙 (태그끼리 겹치는 순서 지정)
 => 목적은 원하는 위치에 태그를 배치하고자 할 때 중요함
 # HTML은 모바일, 태블릿 간의 배치, 크로스 브라우징에 따라 화면 구조가 변경될 수 있다.
 => 화면 만들 때, 여러 가지 브라우저 테스트가 필수적임.
+# MDN에 있는 문서는 공식 문서는 아니나, 다른 글보다는 정확하다.
+# 기본적으로 모든 태그는 position 속성이 static으로 설정돼있음
+# CSS 속성 중 position 값이 static, relative, absolute, fixed이 되면 상하좌우로 바꿀 수 있음
+=> relative는 position이 static일 때의 위치를 기준으로 변경
+=> absolute는 화면을 기준으로 변경
