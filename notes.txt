@@ -87,6 +87,18 @@
 => 화면 만들 때, 여러 가지 브라우저 테스트가 필수적임.
 # MDN에 있는 문서는 공식 문서는 아니나, 다른 글보다는 정확하다.
 # 기본적으로 모든 태그는 position 속성이 static으로 설정돼있음
-# CSS 속성 중 position 값이 static, relative, absolute, fixed이 되면 상하좌우로 바꿀 수 있음
+# CSS 속성 중 position 값이 static, relative, absolute, fixed이 되면 상하좌우로 흐름을 바꿀 수 있음
 => relative는 position이 static일 때의 위치를 기준으로 변경
-=> absolute는 화면을 기준으로 변경
+=> absolute는 컨테이닝 블록의 위치를 기준으로 변경, absolute의 컨테이닝 블록음 계속 부모 태그를 올라가 position 속성이 static이 아닌 부모 태그임
+   (html 태그가 컨테이닝 블록임, 위치가 변경되는 경우는 right, top 등과 같은 속성을 적용했을 때, 이외에는 모두 태그 위치 기준 동작)
+   (top, right, bottom, left가 없어도 absolute는 기본 배치 흐름에서 벗어남)
+   (position 속성이 absolute인 경우, 자신의 컨테이닝 블록이 어디인지 알아야 함)
+=> fixed는 화면이 바뀌어도 그 위치에 고정되서 있는 것을 의미
+   (fixed도 absolute와 동일하게 자신의 컨테이닝 블록이 어디인지 알아야 함)
+   (fixed는 주로 컨테이닝 블록이 뷰 포트나 페이지 영역임)
+# width랑 height를 %로 주는 경우, 컨테이닝 블록을 기준으로 몇%인지 정해진다.
+# 조상의 display 속성이 inline인 경우, 컨테이닝 블록이 될 수 없음
+# button 태그는 기본적으로 세로 가운데 정렬을 함.
+# 이미지 스프라이트는 귀찮으나, 하나씩 이미지를 삽입해야 함.
+# 실무에선 nth-child 최대한 안쓰는 게 좋음
+=> 순서에 의존적인 속성은 유지보수가 어려움
