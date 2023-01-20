@@ -32,9 +32,17 @@ html, body {
     overflow: hidden;
 }
 
-.center-align, #header-wrapper {
+.relative {
+    position: relative;
+}
+
+.center-align {
     margin: 0 auto;
     width: 1080px;
+}
+
+#header-search {
+    display: inline-block;
 }
 
 #header-search a {
@@ -42,19 +50,19 @@ html, body {
 }
 /* 자식 선택자 지정 = 바로 안에 속한 태그 (깊이 2) */
 #header-search h1 {
+    width: 222px;
+    height: 52px;
     display: inline-block;
     /*background-image: url('./sp_search.png');*/
     /*background-position: 0 -158px;*/
     /*background-repeat: no-repeat;*/
     background: url(./sp_search.png) 0px -158px no-repeat;
+    vertical-align: middle;
+    position: relative;
     /*vertical-align: top;*/
     background-size: 442px 428px;
-    width: 222px;
-    height: 52px;
-    vertical-align: middle;
     /*text-indent: 101%;*/
     /*overflow: hidden;*/
-    position: relative;
     top: -6px
 
 }
@@ -114,9 +122,9 @@ html, body {
 
 #search-image {
     background-size: 442px 428px;
-    display: inline-block;
     width: 22px;
     height: 22px;
+    display: inline-block;
     background-image: url(./sp_search.png);
     background-position: -420px -22px;
     background-repeat: no-repeat;
@@ -177,6 +185,12 @@ nav li:nth-child(5) span:first-child {
 nav li:nth-child(6) span:first-child {
     width: 27px;
     background-position: -292px -208px;
+}
+
+#search-ranking {
+    position: absolute;
+    top: 0;
+    right: 0;
 }
 /* 자손 선택자 지정 = 깊이가 3이상에 속한 태그 */
 /*#header-center h1 {
