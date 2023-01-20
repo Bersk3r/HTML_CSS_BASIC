@@ -9,6 +9,7 @@
 html, body {
     margin: 0;
     padding: 0;
+    font-family: -apple-system,BlinkMacSystemFont,"Malgun Gothic","맑은 고딕",helvetica,"Apple SD Gothic Neo",sans-serif;
 }
 
 #fixed {
@@ -25,11 +26,11 @@ html, body {
 
 .blind {
     position: absolute;
+    overflow: hidden;
     clip: rect(0 0 0 0);
+    margin: -1px;
     width: 1px;
     height: 1px;
-    margin: -1px;
-    overflow: hidden;
 }
 
 .relative {
@@ -41,8 +42,32 @@ html, body {
     width: 1080px;
 }
 
+header {
+    height: 170px;
+}
+
+#header-top
+{
+    float: right;
+    margin-top: 8px;
+}
+
+#header-top span {
+    /* 두 글자씩 같은 경우에 2개->1개 축약 가능 */
+    /* color는 글자 색 */
+    color: #888;
+    /* letter-spacing은 자간 */
+    letter-spacing: -1px;
+    /* font-size는 font의 크기 */
+    font-size: 11px;
+    /* line-height는 글자의 높이 (글자 라인간 간격 조정) */
+    line-height: 22px;
+}
+
 #header-search {
-    display: inline-block;
+    /*display: inline-block;*/
+    clear: right;
+    padding-top: 12px;
 }
 
 #header-search a {
@@ -63,7 +88,8 @@ html, body {
     background-size: 442px 428px;
     /*text-indent: 101%;*/
     /*overflow: hidden;*/
-    top: -6px
+    top: -5px;
+    left: 1px;
 
 }
 
@@ -76,7 +102,7 @@ html, body {
 }
 
 #header-search fieldset {
-    margin-left : 20px;
+    margin-left : 18px;
     /*padding-top : 12px;*/
     /*padding-bottom : 12px;*/
     /*padding-left : 10px;*/
@@ -128,7 +154,7 @@ html, body {
     background-image: url(./sp_search.png);
     background-position: -420px -22px;
     background-repeat: no-repeat;
-    margin: 0px;
+    margin: 14px;
 
     /* 세로 가운데 정렬하는 방법 중 1개 */
     /* position: relative; */
@@ -137,14 +163,27 @@ html, body {
     /* transform: translateY(-50%); */
 }
 
+nav {
+    height: 46px;
+    border-top: 1px solid #f1f3f6;
+    border-bottom: 1px solid #d1d8e4;
+}
+
 nav ul {
     margin: 0;
-    padding: 0;
+    padding: 16px 0 0 4px;
     list-style: none;
+    display: inline-block;
 }
 
 nav li {
     display: inline-block;
+}
+
+nav li:first-child span:first-child {
+    width: 25px;
+    background-position: -294px -155px;
+    margin-left: 0;
 }
 
 nav li span:first-child {
@@ -152,15 +191,10 @@ nav li span:first-child {
     display: inline-block;
     background: url(./sp_nav.png);
     background-repeat: no-repeat;
-    margin-left: 14px;
+    margin-left: 10px;
 }
 
 /*nav li:first-child span:first-child {*/
-nav li:first-child span:first-child {
-    width: 25px;
-    background-position: -294px -155px;
-    margin-left: 0;
-}
 
 nav li:nth-child(2) span:first-child {
     width: 27px;
@@ -187,11 +221,26 @@ nav li:nth-child(6) span:first-child {
     background-position: -292px -208px;
 }
 
+.nav-divider {
+    display: inline-block;
+    margin: 18px 16px 0;
+    width: 1px;
+    height: 14px;
+    background: #ebeef3;
+}
+
 #search-ranking {
     position: absolute;
-    top: 0;
-    right: 0;
+    top: 16px;
+    right: 100px;
 }
+
+#rank-number {
+    margin-top: -9px;
+    color: #00ab33;
+    font-size: 16px;
+}
+
 /* 자손 선택자 지정 = 깊이가 3이상에 속한 태그 */
 /*#header-center h1 {
 }
