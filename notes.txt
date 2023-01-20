@@ -84,6 +84,8 @@
    (부모 태그 입장에서 자식 태그를 어디까지 포함해야 되는가)
    (조건 : float (float가 none이 아닌 요소), 인라인 블록 (display: inline-block), overflow가 visible이 아닌 요소, 절대 위치로 지정된 요소 (position이 absolute나 fixed인 요소), flex box (display: flex 혹은 inline-flex인 요소))
 => Stacking Context는 특정 DIV의 렌더링 순서를 지정하는 규칙 (태그끼리 겹치는 순서 지정)
+   (z-index에서 누가 더 위로 올라갈 지 판단할지 중요)
+
 => 목적은 원하는 위치에 태그를 배치하고자 할 때 중요함
 # HTML은 모바일, 태블릿 간의 배치, 크로스 브라우징에 따라 화면 구조가 변경될 수 있다.
 => 화면 만들 때, 여러 가지 브라우저 테스트가 필수적임.
@@ -110,9 +112,23 @@
 => !important > inline style attribute > id > 다른 attribute, class, pseudo 클래스(:first-child 등) > tag element, psuedo 엘리먼트(::berfore 등) 순으로 우선 순위가 높음
 => 우선 순위가 같은 경우, 갯수가 많은 CSS가 우선 순위가 높음
 # float은 둥둥 떠있는 상태이므로, 공간에 그 다음 콘텐츠가 들어감.
-=> 컨텐츠끼리 겹치지는 않음, 다만 컨텐츠를 피함.
+=> 컨텐츠끼리 겹치지는 않음, 다만 컨텐츠(형제 태그)를 감쌈.
+(이 때, 감싸지 않게 하지 않으려면, 형제 태그에 overflow: auto/hidden 혹은 clear: both 속성을 부여하여 블록 포맷 컨텍스트를 만들면 됨.)
 => overflow 값은 기본 visible이다.
 (overflow 값이 visible인 경우, 블록 포맷 컨텍스트가 아니므로, float이 넘침)
 (overflow 값이 auto인 경우, 자식 태그의 높이가 부모 태그보다 긴 경우 (넘치는 경우), scollbar를 생성)
 (overflow 값이 hidden인 경우, 자식 태그의 높이가 부모 태그보다 길면 길이 차만큼 잘라버림)
-
+=> 보통은 overflow 값을 hidden으로 설정하여 부모 태그가 자식 태그를 감싸도록 하여 블록 포맷 컨텍스트로 만듬
+(블록 포맷 컨텍스트가 어려운 경우, text-align : right이나 position : absolute를 사용하는 것도 하나의 방법)
+=> float는 배치 흐름에서 벗어나는 개념이며, Stacking Context의 개념과 다름
+# CSS에서 ID는 두 단어 이상으로 조합하는 것을 추천
+=> 한 단어인 경우, html 문서에서 딱 한번 밖에서 사용 못 함
+=> 클래스는 중복이 가능하므로 한 단어 이상으로 지어도 문제 없음
+=> 가끔 이름이 이상한 언어로 되어 있는 경우, 이건 사람이 명명한 것이 아닌 프로그램이 명명한 것
+(이유는 크롤링 로봇을 막기 위한 목적)
+# margin과 padding 중 간격 조정을 어떤 걸 사용할 지 헷갈리는 경우, 내 태그 공간을 뭘로할 지 정해야 함
+=> 테두리가 있는 경우는 구별하기 쉬우나, 없는 경우 구별하기가 어려움
+=> 안전한 건 padding이 margin이 더 안전함
+(a 태그의 경우, padding을 클릭해도 이동됨)
+# margin collapsing은 상하에 margin이 있는 경우, 중첩되면 없어지는 현상
+# emmet 기능을 사용하면 유용함
