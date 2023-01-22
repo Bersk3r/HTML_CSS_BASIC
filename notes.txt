@@ -131,4 +131,7 @@
 => 안전한 건 padding이 margin이 더 안전함
 (a 태그의 경우, padding을 클릭해도 이동됨)
 # margin collapsing은 상하에 margin이 있는 경우, 중첩되면 없어지는 현상
-# emmet 기능을 사용하면 유용함
+# emmet 기능을 사용하면 유용함 (CSS 내 h11 + tab 입력 시, height 11px로 변환됨)
+# vertical-align은 inline 혹은 inline-block에서 사용 가능
+# nth-child는 똑같은 태그 뿐만이 아닌 다른 태그까지 자식의 순서로 포함됨.
+# nth-of-type은 똑같은 태그에서만 비교함.
