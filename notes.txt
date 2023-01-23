@@ -144,4 +144,4 @@
 (width : 100%는 필수가 아님)
 (해당 방법은 margin-collapsing과 block-format-context를 해결할 수 있는 방법 중 1개, 실제로 많이 쓰임)
 # 높이가 같은 경우는 inline-block으로 나열해도 문제 없으나, 높이 다른 경우는 가로->세로 순으로 영역을 분할하는 게 좋음
-
+# inline-block일 때, 설정 공간 크기를 넘는 경우, 콘텐츠가 다음 줄로 밀려남
