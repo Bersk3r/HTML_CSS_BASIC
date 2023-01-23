@@ -135,3 +135,13 @@
 # vertical-align은 inline 혹은 inline-block에서 사용 가능
 # nth-child는 똑같은 태그 뿐만이 아닌 다른 태그까지 자식의 순서로 포함됨.
 # nth-of-type은 똑같은 태그에서만 비교함.
+# margin-collapsing이 발생되는 이유는 블록 포맷 컨텍스트로 인한 문제로 발생됨
+=> 발생 경우 3가지 : 형제 간 margin이 중첩될 때 (중첩), 부모 및 first-child/last-child에서 margin-top/margin-bottom이 있을 때 (침범), 빈 블록에 margin만 존재할 때 (엇갈림, 교차)
+   (overflow : auto/hidden 사용 = 해결 가능하나, 덮어버리는 현상 발생)
+   (float: left 및 width:100% 사용 = 겹치지 않고 부모/자식 표현 가능)
+   (position : absolute = 2가지 케이스에선 먹히나 형제 태그 간에는 해결 불가)
+=> 해결책은 display: inline-block으로 선언, width: 100% 주면 해결
+(width : 100%는 필수가 아님)
+(해당 방법은 margin-collapsing과 block-format-context를 해결할 수 있는 방법 중 1개, 실제로 많이 쓰임)
+# 높이가 같은 경우는 inline-block으로 나열해도 문제 없으나, 높이 다른 경우는 가로->세로 순으로 영역을 분할하는 게 좋음
+

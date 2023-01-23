@@ -328,6 +328,8 @@ nav li.more:first-child span:first-child {
 
 main {
     background-color: #f2f4f7;
+    display: inline-block;
+    width: 100%;
 }
 
 /* 자손 선택자 지정 = 깊이가 3이상에 속한 태그 */
