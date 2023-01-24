@@ -20,6 +20,10 @@ h1, h2, h3, h4, h5, h6 {
     display: inline-block;
 }
 
+.float-left {
+    float: left;
+}
+
 #fixed {
     position: fixed;
     top: 50px;
@@ -208,17 +212,17 @@ nav ul {
     display: inline-block;
 }
 
-nav li {
+#nav-menu li {
     display: inline-block;
 }
 
-nav li:first-child span:first-child {
+#nav-menu li:first-child span:first-child {
     width: 25px;
     background-position: -294px -155px;
     margin-left: 0;
 }
 
-nav li span:first-child {
+#nav-menu li span:first-child {
     height: 16px;
     display: inline-block;
     background: url(./sp_nav.png);
@@ -228,82 +232,82 @@ nav li span:first-child {
 
 /*nav li:first-child span:first-child {*/
 
-nav li:nth-child(2) span:first-child {
+#nav-menu li:nth-child(2) span:first-child {
     width: 27px;
     background-position: -235px -233px;
 }
 
-nav li:nth-child(3) span:first-child {
+#nav-menu li:nth-child(3) span:first-child {
     width: 40px;
     background-position: -49px -181px;
 }
 
-nav li:nth-child(4) span:first-child {
+#nav-menu li:nth-child(4) span:first-child {
     width: 40px;
     background-position: -128px -130px;
 }
 
-nav li:nth-child(5) span:first-child {
+#nav-menu li:nth-child(5) span:first-child {
     width: 27px;
     background-position: -112px -260px;
 }
 
-nav li:nth-child(6) span:first-child {
+#nav-menu li:nth-child(6) span:first-child {
     width: 27px;
     background-position: -292px -208px;
 }
 
-nav li:nth-child(7) span:first-child {
+#nav-menu li:nth-child(7) span:first-child {
     width: 34px;
     background-position: -200px -182px;
 }
 
-nav li:nth-child(8) span:first-child {
+#nav-menu li:nth-child(8) span:first-child {
     width: 26px;
     background-position: -294px -25px;
 }
 
-nav li:nth-child(9) span:first-child {
+#nav-menu li:nth-child(9) span:first-child {
     width: 27px;
     background-position: -86px -233px;
 }
 
-nav li:nth-child(10) span:first-child {
+#nav-menu li:nth-child(10) span:first-child {
     width: 27px;
     background-position: -255px -260px;
 }
 
-nav li:nth-child(11) span:first-child {
+#nav-menu li:nth-child(11) span:first-child {
     width: 39px;
     background-position: -126px -156px;
 }
 
-nav li:nth-child(12) span:first-child {
+#nav-menu li:nth-child(12) span:first-child {
     width: 27px;
     background-position: -124px -234px;
 }
 
-nav li:nth-child(13) span:first-child {
+#nav-menu li:nth-child(13) span:first-child {
     width: 27px;
     background-position: -37px -260px;
 }
 
-nav li:nth-child(14) span:first-child {
+#nav-menu li:nth-child(14) span:first-child {
     width: 26px;
     background-position: -219px -260px;
 }
 
-nav li:nth-child(15) span:first-child {
+#nav-menu li:nth-child(15) span:first-child {
     width: 13px;
     background-position: -294px -260px;
 }
 
-nav li:nth-child(16) span:first-child {
+#nav-menu li:nth-child(16) span:first-child {
     width: 26px;
     background-position: -74px -260px;
 }
 
-nav li.more:first-child span:first-child {
+#nav-menu li.more:first-child span:first-child {
     width: 55px;
     background-position: 0 -130px;
 }
@@ -319,8 +323,58 @@ nav li.more:first-child span:first-child {
 
 #search-ranking {
     position: absolute;
-    top: 16px;
-    right: 100px;
+    top: 14px;
+    right: 0;
+    width: 198px;
+    height: 20px;
+}
+
+#search-ranking:hover ul, #search-ranking:hover #search-module {
+    display: inline-block;
+}
+/* #search-ranking ul {} */
+#search-module {
+    top: -15px;
+    right: 0;
+    list-style: none;
+    padding: 17px;
+    margin: 0;
+    width: 332px;
+    height: 334px;
+    border: 1px solid #aaa;
+    background: white;
+    z-index: 100;
+    position: absolute;
+    display: none;
+}
+
+#search-block-first {
+    border-bottom: 1px solid #aaa;
+}
+
+#search-block-second {
+    padding: 0;
+    text-align: center;
+}
+
+#search-block-third {
+    border-bottom: 1px solid #aaa;
+}
+
+#z-example {
+    position: absolute;
+    background: yellow;
+    width: 100px;
+    height: 100px;
+    z-index: 1;
+}
+
+#z-inner {
+    position: absolute;
+    background: red;
+    width: 50px;
+    height: 50px;
+    z-index: 1000;
 }
 
 #rank-number {
@@ -351,11 +405,17 @@ main {
     vertical-align: top;
 }
 
-#main-second-block .inline-block:first-child {
+#main-second-block {
+    display: inline-block;
+    vertical-align: top;
+    margin-bottom: 8px;
+}
+
+#main-second-block .float-left:first-child {
     width: 740px;
     margin-right: 8px;
 }
-#main-second-block .inline-block:last-child {
+#main-second-block .float-left:last-child {
     width: 332px;
     vertical-align: top;
 }
@@ -364,6 +424,7 @@ main {
 #main-fourth-block {
     display: inline-block;
     width: 100%;
+    vertical-align: top;
 }
 
 #main-first-ad {
@@ -382,6 +443,40 @@ main {
     vertical-align: top;
     background-color: white;
     margin-bottom: 8px;
+}
+
+#main-login .login-wrapper {
+    padding: 15px 25px;
+}
+
+#main-login .login-wrapper a {
+    display: block;
+}
+
+#main-login .login-text {
+    color: #888;
+    font-size: 12px;
+    line-height: 14px;
+}
+
+#main-login .login-image {
+    margin-top: 12px;
+    background: url(./sp_login.png) 0 -47px no-repeat;
+    display: inline-block;
+    width: 280px;
+    height: 37px;
+}
+
+#main-login .login-signup {
+    float: right;
+    font-size: 12px;
+    line-height: 30px;
+    color: #666;
+    text-decoration: none;
+}
+
+#main-login .login-signup:hover {
+    text-decoration: underline;
 }
 
 #main-ytn {
@@ -403,7 +498,7 @@ main {
     height: 246px;
     background-color: white;
     margin-right: 8px;
-    margin-bottom: 8px;
+    vertical-align: top;
 }
 
 #main-newsstand ul {
@@ -439,6 +534,7 @@ main {
     height: 142px;
     background-color: white;
     margin-bottom: 8px;
+    vertical-align: top;
 }
 
 #main-second-ad {
@@ -446,13 +542,13 @@ main {
     width: 332px;
     height: 150px;
     background: #555;
-    margin-bottom: 8px;
+    vertical-align: top;
 }
 
 #main-category {
     float: left;
     width: 740px;
-    height: 837px;
+    height: 882px;
     background: white;
     margin-bottom: 8px;
     margin-right: 8px;
@@ -460,10 +556,15 @@ main {
 
 #main-shopping {
     float: left;
-    width: 332px;
-    height: 837px;
+    width: 330px;
+    height: 882px;
     background: white;
     margin-bottom: 8px;
+}
+
+#main-shopping iframe {
+    width: 100%;
+    height: 100%;
 }
 
 #main-event {
@@ -477,7 +578,7 @@ main {
 
 #main-third-ad {
     float: left;
-    width: 332px;
+    width: 330px;
     height: 130px;
     background: #555;
 }
