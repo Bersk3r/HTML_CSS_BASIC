@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <!-- 문서에 대한 부가적인 정보를 가짐-->
+    <!-- 제목, 설명, favicon (favorite icon), css/script 정보 -->
+    <meta charset="utf-8" />
+    <!--   html 정보를 나타내는 태그  (문자 인코딩 방식 정의) -->
+    <link rel="shortcut icon" type="image/x-icon" href="./favicon.ico" />
+    <link rel="stylesheet" href="./naver.css">
+    <!-- favicon 지정 및 href 지정 -->
+    <title>네이버</title>
+</head>
+<body>
+<!--<div id="header">-->
+<header>
+    <!--<div id="fixed">고정</div>-->
+    <!--가운데 정렬용 div-->
+    <!--<div style="background-color: yellow">
+        <div style="float: right; background-color: green; height: 200px">둥둥둥</div>
+        <div>ㅋㅋㅋ</div>
+    </div>-->
+    <div class="center-align">
+        <div id="header-top">
+            <span>네이버를 시작페이지로 > | </span>
+            <span>쥬니어네이버 | </span>
+            <span>해피빈</span>
+            <!--<div style="display:inline-block">네이버를 시작페이지로</div>-->
+            <!-- <div style="display:inline-block">쥬니어네이버</div>-->
+            <!--<div style="display:inline-block">해피빈</div>-->
+        </div>
+        <div id="header-search">
+            <a href="https://www.naver.com">
+                <h1 id="header-logo">
+                    <!-- attribute : 부가 정보 (ex> href) -->
+                    <!--<a href="https://www.naver.com" class="blind">네이버</a>-->
+                    <!--네이버-->
+                    <!--<span class="blind">네이버</span>-->
+                    <span>네이버</span>
+                </h1>
+            </a>
+            <h2 class="blind">검색창</h2>
+            <!--검색 엔진에서 해당 태그를 보고 두 번째로 중요한 단어임을 파악-->
+            <form class="inline-block" action="https://search.naver.com/search.naver?where=nexearch&sm=top_hty&fbm=0&ie=utf8&query=">
+                <fieldset>
+                    <legend class="blind">검색</legend>
+                    <input />
+                    <span id="search-keyboard"></span>
+                    <span id="search-history"></span>
+                    <button>
+                        <span class="blind">검색</span>
+                        <span id="search-image"></span>
+                    </button>
+                    <!--<input type="checkbox"/>-->
+                    <!--<input type="checkbox"/>-->
+                    <!--<input type="radio" name="group"/>-->
+                    <!--<input type="radio" name="group"/>-->
+                </fieldset>
+            </form>
+        </div>
+    </div>
+    <!--</div>-->
+</header>
+<!--<div id="nav">-->
+<nav>
+    <!-- unordered list -->
+    <!--  ordered list (ol) -->
+    <div class="center-align relative">
+        <div id="search-ranking">
+            <h2 class="blind">실시간 검색어</h2>
+            <div>
+                <span id="rank-number">1</span>
+                <span id="rank-title">이종욱</span>
+            </div>
+            <div id="search-module">
+                <div class="search-block-first">
+                    <span>급상승 검색어</span>
+                    <span>전체연령</span>
+                </div>
+                <div class="search-block-second">
+                    <a href="#">1위~10위</a>
+                    <a href="#">11위~20위</a>
+                </div>
+                <div class="search-block-third">
+                    <ul>
+                        <li>
+                            <span class="rank-number">1</span>
+                            <span class="rank-title">이종욱</span>
+                        </li>
+                        <li>
+                            <span class="rank-number">2</span>
+                            <span class="rank-title">HTML</span>
+                        </li>
+                        <li>
+                            <span class="rank-number">3</span>
+                            <span class="rank-title">CSS</span>
+                        </li>
+                        <li>
+                            <span class="rank-number">4</span>
+                            <span class="rank-title">Web</span>
+                        </li>
+                        <li>
+                            <span class="rank-number">5</span>
+                            <span class="rank-title">팀 버너스리</span>
+                        </li>
+                        <li>
+                            <span class="rank-number">6</span>
+                            <span class="rank-title">웹</span>
+                        </li>
+                        <li>
+                            <span class="rank-number">7</span>
+                            <span class="rank-title">블록 포맷 컨텍스트</span>
+                        </li>
+                        <li>
+                            <span class="rank-number">8</span>
+                            <span class="rank-title">컨테이닝 블록</span>
+                        </li>
+                        <li>
+                            <span class="rank-number">9</span>
+                            <span class="rank-title">스태킹 컨텍스트</span>
+                        </li>
+                        <li>
+                            <span class="rank-number">10</span>
+                            <span class="rank-title">마진 콜랩싱</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="search-block-fourth">
+                    <span>2023.01.24 23:00 기준</span>
+                    <span>
+                            <span class="blind">DataLab.급상승 트래킹</span>
+                            <span></span>
+                        </span>
+                </div>
+            </div>
+            <!--<div id="z-example">
+                <div id="z-inner"></div>
+            </div>-->
+        </div>
+        <ul id="nav-menu">
+            <!-- list item -->
+            <li><a href=""><span class="nav-item-mail"></span><span class="blind">메일</span></a></li>
+            <li><a href=""><span></span><span class="blind">카페</span></a></li>
+            <li><a href=""><span></span><span class="blind">블로그</span></a></li>
+            <li><a href=""><span></span><span class="blind">지식인</span></a></li>
+            <li><a href=""><span></span><span class="blind">쇼핑</span></a></li>
+            <li><a href=""><span></span><span class="blind">네이버페이</span></a></li>
+            <li><a href=""><span></span><span class="blind">네이버TV</span></a></li>
+            <li><a href=""><span></span><span class="blind">사전</span></a></li>
+            <li><a href=""><span></span><span class="blind">뉴스</span></a></li>
+            <li><a href=""><span></span><span class="blind">증권</span></a></li>
+            <li><a href=""><span></span><span class="blind">부동산</span></a></li>
+            <li><a href=""><span></span><span class="blind">지도</span></a></li>
+            <li><a href=""><span></span><span class="blind">영화</span></a></li>
+            <li><a href=""><span></span><span class="blind">뮤직</span></a></li>
+            <li><a href=""><span></span><span class="blind">책</span></a></li>
+            <li><a href=""><span></span><span class="blind">웹툰</span></a></li>
+        </ul>
+        <div class="nav-divider"></div>
+        <ul>
+            <li class="more"><a href=""><span></span><span class="blind">더보기</span></a></li>
+        </ul>
+    </div>
+    <!--</div>-->
+</nav>
+<main>
+    <div id="main-centered" class="center-align">
+        <div id="main-first-block">
+            <div id="main-first-ad"></div>
+            <div id="main-login">
+                <h3 class="blind">로그인</h3>
+                <div class="login-wrapper">
+                    <span class="login-text">네이버를 더 안전하고 편리하게 이용하세요.</span>
+                    <a href="https://nid.naver.com/nidlogin.login?mode=form&url=https%3A%2F%2Fwww.naver.com">
+                        <span class="blind">NAVER 로그인</span>
+                        <span class="login-image"></span>
+                    </a>
+                    <a
+                            class="login-signup"
+                            href="https://nid.naver.com/nidregister.form?url=https%3A%2F%2Fwww.naver.com"
+                    >회원가입</a>
+                </div>
+            </div>
+        </div>
+        <div id="main-second-block">
+            <div class="float-left">
+                <div id="main-ytn">
+                    <h3>연합뉴스</h3>
+                    <ol>
+                        <li>하이닉스 주식 반등 중</li>
+                    </ol>
+                </div>
+                <div id="main-newsstand">
+                    <h3>뉴스스탠드</h3>
+                    <ul>
+                        <li><img src="./c01.png" alt="프레시안" /></li>
+                        <li><img src="./c02.png" alt="서울경제" /></li>
+                        <li><img src="./c03.png" alt="시사IN" /></li>
+                        <li><img src="./c01.png" alt="프레시안" /></li>
+                        <li><img src="./c02.png" alt="서울경제" /></li>
+                        <li><img src="./c03.png" alt="시사IN" /></li>
+                        <li><img src="./c01.png" alt="프레시안" /></li>
+                        <li><img src="./c02.png" alt="서울경제" /></li>
+                        <li><img src="./c03.png" alt="시사IN" /></li>
+                        <li><img src="./c01.png" alt="프레시안" /></li>
+                        <li><img src="./c02.png" alt="서울경제" /></li>
+                        <li><img src="./c03.png" alt="시사IN" /></li>
+                        <li><img src="./c01.png" alt="프레시안" /></li>
+                        <li><img src="./c02.png" alt="서울경제" /></li>
+                        <li><img src="./c03.png" alt="시사IN" /></li>
+                        <li><img src="./c01.png" alt="프레시안" /></li>
+                        <li><img src="./c02.png" alt="서울경제" /></li>
+                        <li><img src="./c03.png" alt="시사IN" /></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="float-left">
+                <div id="main-weather"></div>
+                <div id="main-second-ad"></div>
+            </div>
+        </div>
+        <div id="main-third-block">
+            <div id="main-category">
+                <h3 class="blind">주제별 보기</h3>
+                <div id="main-category-top">
+                    <button id="subject-all">
+                        <span class="blind">전체 주제 열기</span>
+                        <span></span>
+                    </button>
+                    <div id="subject-list"></div>
+                    <button id="subject-prev">
+                        <span class="blind">이전 주제</span>
+                        <span></span>
+                    </button>
+                    <button id="subject-next">
+                        <span class="blind">다음 주제</span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+            <div id="main-shopping">
+                <!--<h3>쇼핑</h3>-->
+                <iframe src="https://castbox.shopping.naver.com/shopbox/main.nhn?" frameborder="0" scrolling="no"></iframe>
+            </div>
+        </div>
+        <div id="main-fourth-block">
+            <div id="main-event">
+                <h3>이벤트</h3>
+            </div>
+            <div id="main-third-ad">
+            </div>
+        </div>
+    </div>
+</main>
+<!--<div id="footer">-->
+<footer>
+    <div>공지사항</div>
+    <div>Creators</div>
+    <div>회사 소개</div>
+    <!--</div>-->
+</footer>
+<!-- 화면 -->
+<!-- 브라우저 즐겨찾기 및 스크롤바 안이 화면 영역-->
+</body>
+</html>
