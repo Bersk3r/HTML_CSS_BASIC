@@ -348,17 +348,111 @@ nav ul {
     display: none;
 }
 
-#search-block-first {
-    border-bottom: 1px solid #aaa;
+#search-module
+
+.search-block-first {
+    padding-bottom: 10px;
 }
 
-#search-block-second {
-    padding: 0;
+.search-block-first span:first-child {
+    height: 30px;
+    color: #000;
+    margin: 0 6px;
+    letter-spacing: -1px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    vertical-align: top;
+}
+
+.search-block-first span:nth-child(2) {
+    position: absolute;
+    text-align: left;
+    margin: 0 6px;
+    color: #666;
+    font-weight: 400;
+    font-size: 12px;
+    right: 20px;
+}
+
+.search-block-second {
+}
+
+.search-block-second a {
+    float: left;
+    margin-left: -1px;
+    padding-top: 5px;
+    width: 147px;
+    height: 22px;
+    border: 1px solid #e3e7ee;
+    background: #f9fafc;
+    color: #888;
+    vertical-align: top;
     text-align: center;
+    text-decoration: none;
+    font-size: 12px;
+    line-height: 14px;
 }
 
-#search-block-third {
-    border-bottom: 1px solid #aaa;
+.search-block-third {
+
+}
+
+.search-block-third ul {
+    padding-bottom: 3px;
+    border-bottom: 1px solid #f1f3f6;
+}
+
+.search-block-third li {
+    display: inline-block;
+    width: 100%;
+    position: relative;
+    height: 18px;
+}
+
+.search-block-third li .rank-number{
+    float:left;
+    top: 50%;
+    left: 0;
+    min-width: 17px;
+    color: #000;
+    vertical-align: top;
+    text-align: center;
+    font-size: 14px;
+    font-family: Arial,Sans-serif;
+    line-height: 18px;
+}
+
+.search-block-third li .rank-title {
+    float:left;
+    top: -25%;
+    font-size: 12px;
+    line-height: 18px;
+    padding-top: 5px;
+    padding-left: 5px;
+    position: relative;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.search-block-fourth {
+    border-top: 1px solid #aaa;
+}
+
+.search-block-fourth span {
+    color: #888;
+    font-size: 11px;
+    line-height: 24px;
+}
+
+.search-block-fourth span span:nth-child(2){
+    background: url(./sp_search_s.png)  -200px -74px no-repeat;
+    margin-top:8px;
+    width: 58px;
+    height: 10px;
+    position: absolute;
+    right: 20px;
 }
 
 #z-example {
